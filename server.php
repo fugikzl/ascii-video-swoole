@@ -25,7 +25,7 @@ $server->on('request', function (Swoole\Http\Request $request, Swoole\Http\Respo
     foreach($framesMap as $frame) {
         $response->write("\033[H");
         $response->write("\n$frame\n");
-        usleep(3000000);
+        usleep(30000);
     }
     $response->end();
 });
